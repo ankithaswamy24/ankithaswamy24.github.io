@@ -1,4 +1,119 @@
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f7f3;
+    color: #333333;
+    line-height: 1.8;
+}
+
+/* Navigation */
+
+nav {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+nav a {
+    color: #344e41;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #829b85;
+}
+
+/* Homepage */
+
+header {
+    text-align: center;
+    padding: 65px 20px;
+    background-color: #e9ede5;
+}
+
+.headshot {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 46px;
+    font-weight: normal;
+    color: #344e41;
+    margin: 20px 0 5px;
+}
+
+header p {
+    font-size: 18px;
+    color: #626e65;
+    margin: 5px 0 20px;
+    line-height: 1.6;
+}
+
+.header-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Main Sections */
+
+section {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 45px 30px;
+    border-bottom: 1px solid #deded6;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: normal;
+    color: #344e41;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-size: 22px;
+    color: #344e41;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 16px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
 /* Education */
 
 .education-card {
@@ -11,6 +126,7 @@
 .education-card h4 {
     color: #344e41;
     font-size: 17px;
+    margin-top: 25px;
     margin-bottom: 10px;
 }
 
@@ -19,6 +135,29 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
     padding-left: 20px;
+}
+
+/* Experience, Projects and Leadership */
+
+.experience-card,
+.project-card,
+.leadership-card {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border: 1px solid #e3e5df;
+}
+
+.role {
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.date {
+    color: #777777;
+    font-size: 14px;
+    margin: 5px 0 20px;
 }
 
 /* Skills */
@@ -55,9 +194,111 @@
     font-size: 13px;
 }
 
+/* Buttons */
+
+.button,
+.header-links a {
+    display: inline-block;
+    background-color: #344e41;
+    color: white;
+    text-decoration: none;
+    padding: 11px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover,
+.header-links a:hover {
+    background-color: #567260;
+}
+
+/* Contact */
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.contact-links a {
+    color: #344e41;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #344e41;
+    color: white;
+}
+
+footer p {
+    font-size: 13px;
+}
+
 /* Mobile Layout */
 
 @media (max-width: 600px) {
+
+    html {
+        scroll-padding-top: 140px;
+    }
+
+    nav {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    header {
+        padding: 45px 20px;
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    .headshot {
+        width: 160px;
+        height: 160px;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .experience-card,
+    .project-card,
+    .leadership-card,
+    .education-card,
+    .skill-card {
+        padding: 20px;
+    }
+
     .coursework {
         grid-template-columns: 1fr;
     }
@@ -65,9 +306,5 @@
     .skills-grid {
         grid-template-columns: 1fr;
     }
-
-    .education-card,
-    .skill-card {
-        padding: 20px;
-    }
 }
+
