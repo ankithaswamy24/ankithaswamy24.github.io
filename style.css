@@ -1,215 +1,73 @@
 
-* {
-    box-sizing: border-box;
-}
+/* Education */
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8f7f3;
-    color: #333333;
-    line-height: 1.8;
-}
-
-/* Navigation */
-
-nav {
-    background-color: #ffffff;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-nav a {
-    color: #344e41;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-nav a:hover {
-    color: #829b85;
-}
-
-/* Homepage */
-
-header {
-    text-align: center;
-    padding: 65px 20px;
-    background-color: #e9ede5;
-}
-
-.headshot {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-    border: 5px solid white;
-}
-
-header h1 {
-    font-family: Georgia, serif;
-    font-size: 46px;
-    font-weight: normal;
-    color: #344e41;
-    margin: 20px 0 5px;
-}
-
-header p {
-    font-size: 18px;
-    color: #626e65;
-    margin: 5px 0 20px;
-}
-
-.header-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-/* Main Sections */
-
-section {
-    max-width: 950px;
-    margin: 0 auto;
-    padding: 45px 30px;
-    border-bottom: 1px solid #deded6;
-}
-
-h2 {
-    font-family: Georgia, serif;
-    font-size: 30px;
-    font-weight: normal;
-    color: #344e41;
-    margin-top: 0;
-    margin-bottom: 25px;
-}
-
-h3 {
-    font-size: 22px;
-    color: #344e41;
-    margin-top: 0;
-    margin-bottom: 8px;
-}
-
-p {
-    font-size: 16px;
-}
-
-/* Experience, Project and Leadership Cards */
-
-.experience-card,
-.project-card,
-.leadership-card {
+.education-card {
     background-color: white;
     padding: 30px;
-    margin-bottom: 25px;
     border-radius: 10px;
     border: 1px solid #e3e5df;
 }
 
-.role {
-    font-weight: 600;
-    margin: 5px 0;
-}
-
-.date {
-    color: #777777;
-    font-size: 14px;
-    margin: 5px 0 20px;
-}
-
-li {
+.education-card h4 {
+    color: #344e41;
+    font-size: 17px;
     margin-bottom: 10px;
 }
 
-/* Buttons */
-
-.button,
-.header-links a {
-    display: inline-block;
-    background-color: #344e41;
-    color: white;
-    text-decoration: none;
-    padding: 11px 24px;
-    border-radius: 6px;
-    font-size: 14px;
-    margin: 5px;
+.coursework {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    padding-left: 20px;
 }
 
-.button:hover,
-.header-links a:hover {
-    background-color: #567260;
+/* Skills */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-/* Contact */
+.skill-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e3e5df;
+}
 
-.contact-links {
+.skill-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.skill-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 8px;
 }
 
-.contact-links a {
+.skill-tags span {
+    background-color: #e9ede5;
     color: #344e41;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.contact-links a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-
-footer {
-    text-align: center;
-    padding: 25px;
-    background-color: #344e41;
-    color: white;
-}
-
-footer p {
+    padding: 6px 12px;
+    border-radius: 5px;
     font-size: 13px;
 }
 
 /* Mobile Layout */
 
 @media (max-width: 600px) {
-    nav {
-        gap: 15px;
-        padding: 15px;
+    .coursework {
+        grid-template-columns: 1fr;
     }
 
-    header h1 {
-        font-size: 34px;
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 
-    .headshot {
-        width: 160px;
-        height: 160px;
-    }
-
-    section {
-        padding: 30px 20px;
-    }
-
-    .experience-card,
-    .project-card,
-    .leadership-card {
+    .education-card,
+    .skill-card {
         padding: 20px;
     }
 }
